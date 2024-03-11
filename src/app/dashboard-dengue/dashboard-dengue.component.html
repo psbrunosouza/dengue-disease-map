@@ -45,7 +45,7 @@
     <div>
       <h4>Níveis Epidemiológicos</h4>
     </div>
-    <div class="flex-1 w-full h-full">
+    <div class="flex-1 relative">
       <app-se-levels></app-se-levels>
     </div>
   </section>
@@ -54,11 +54,16 @@
     <div>
       <h4>Casos por gênero</h4>
     </div>
-    <div class="flex-1 w-full h-full">
+    <div style="width: 100%">
       <app-by-genre></app-by-genre>
     </div>
   </section>
-  <section
-    class="bg-accent col-start-10 col-span-3 row-start-9 row-span-4"
-  ></section>
+  <section class="bg-accent col-start-10 col-span-3 row-start-9 row-span-4">
+    <div>
+      <h4>Casos por raça/cor</h4>
+    </div>
+    <div style="width: 100%" class="flex-1">
+      <app-by-race></app-by-race>
+    </div>
+  </section>
 </main>
