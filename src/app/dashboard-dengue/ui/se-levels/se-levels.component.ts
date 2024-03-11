@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 
@@ -8,6 +8,7 @@ import { BaseChartDirective } from 'ng2-charts';
   imports: [BaseChartDirective],
   templateUrl: './se-levels.component.html',
   styleUrl: './se-levels.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SeLevelsComponent implements OnInit {
   chart!: any;
@@ -15,12 +16,30 @@ export class SeLevelsComponent implements OnInit {
   createChart() {
     this.chart = new Chart('chart', {
       type: 'line',
+      options: {
+        responsive: true,
+      },
       data: {
-        labels: ['1', '2', '3', '4', '5', '6', '7'],
+        labels: [
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+          '6',
+          '7',
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+          '6',
+          '7',
+        ],
         datasets: [
           {
             label: 'My First Dataset',
-            data: [65, 59, 80, 81, 56, 55, 40],
+            data: [65, 59, 80, 1000, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
             fill: false,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1,

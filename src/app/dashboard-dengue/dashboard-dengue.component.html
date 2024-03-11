@@ -39,19 +39,26 @@
       <h2>4</h2>
     </div>
   </section>
-  <section class="bg-accent col-start-7 col-span-6 row-start-4 row-span-6">
+  <section
+    class="bg-accent flex flex-col col-start-7 col-span-6 row-start-4 row-span-5"
+  >
     <div>
       <h4>Níveis Epidemiológicos</h4>
     </div>
-    <div>
+    <div class="flex-1 w-full h-full">
       <app-se-levels></app-se-levels>
     </div>
   </section>
 
+  <section class="bg-accent col-start-7 col-span-3 row-start-9 row-span-4">
+    <div>
+      <h4>Casos por gênero</h4>
+    </div>
+    <div class="flex-1 w-full h-full">
+      <app-by-genre></app-by-genre>
+    </div>
+  </section>
   <section
-    class="bg-accent col-start-7 col-span-3 row-start-10 row-span-3"
-  ></section>
-  <section
-    class="bg-accent col-start-10 col-span-3 row-start-10 row-span-3"
+    class="bg-accent col-start-10 col-span-3 row-start-9 row-span-4"
   ></section>
 </main>
