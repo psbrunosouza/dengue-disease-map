@@ -14,6 +14,8 @@ export class ByRaceComponent {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective<'bar'> | undefined;
 
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
+    responsive: true,
+    aspectRatio: 3,
     scales: {
       x: {},
       y: {
@@ -43,9 +45,7 @@ export class ByRaceComponent {
   }: {
     event?: ChartEvent;
     active?: object[];
-  }): void {
-    console.log(event, active);
-  }
+  }): void {}
 
   public chartHovered({
     event,
@@ -53,7 +53,5 @@ export class ByRaceComponent {
   }: {
     event?: ChartEvent;
     active?: object[];
-  }): void {
-    console.log(event, active);
-  }
+  }): void {}
 }

@@ -1,6 +1,8 @@
-<main class="grid gap-2 h-[calc(100vh-84px-84px)] grid-cols-12 grid-rows-12">
+<main
+  class="lg:grid flex flex-col gap-2 h-[calc(100vh-84px)] lg:h-[calc(100vh-84px-84px)] lg:grid-cols-12 lg:grid-rows-12"
+>
   <section
-    class="bg-accent col-start-1 col-span-6 row-start-1 row-span-12 flex flex-col"
+    class="bg-accent lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-12 flex flex-col"
   >
     <h4>Mapa das Arboviroses</h4>
     <div class="flex-1 flex items-center justify-center w-full">
@@ -9,7 +11,7 @@
     <h4 class="self-end">1700 casos</h4>
   </section>
   <section
-    class="bg-accent col-start-7 col-span-2 row-start-1 row-span-3 flex flex-col justify-between"
+    class="bg-accent lg:col-start-7 lg:col-span-2 lg:row-start-1 lg:row-span-3 flex flex-col justify-between"
   >
     <div>
       <h4>Nível</h4>
@@ -45,25 +47,24 @@
     <div>
       <h4>Níveis Epidemiológicos</h4>
     </div>
-    <div class="flex-1 relative">
-      <app-se-levels></app-se-levels>
-    </div>
+    <canvas #canvas class="w-full h-full"></canvas>
+    <!-- <app-se-levels></app-se-levels> -->
+    <div></div>
   </section>
-
-  <section class="bg-accent col-start-7 col-span-3 row-start-9 row-span-4">
+  <section
+    class="bg-accent flex flex-col col-start-7 col-span-3 row-start-9 row-span-4"
+  >
     <div>
       <h4>Casos por gênero</h4>
     </div>
-    <div style="width: 100%">
-      <app-by-genre></app-by-genre>
-    </div>
+    <app-by-genre></app-by-genre>
   </section>
-  <section class="bg-accent col-start-10 col-span-3 row-start-9 row-span-4">
+  <section
+    class="bg-accent flex flex-col col-start-10 col-span-3 row-start-9 row-span-4"
+  >
     <div>
       <h4>Casos por raça/cor</h4>
     </div>
-    <div style="width: 100%" class="flex-1">
-      <app-by-race></app-by-race>
-    </div>
+    <app-by-race></app-by-race>
   </section>
 </main>

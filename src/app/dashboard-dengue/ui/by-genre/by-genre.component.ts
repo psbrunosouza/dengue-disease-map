@@ -12,6 +12,9 @@ import { BaseChartDirective } from 'ng2-charts';
 })
 export class ByGenreComponent {
   public pieChartOptions: ChartConfiguration['options'] = {
+    responsive: true,
+    aspectRatio: 4,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
         display: true,

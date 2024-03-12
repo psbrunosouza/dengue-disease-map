@@ -41,6 +41,8 @@ export class SeLevelsComponent {
 
   public lineChartOptions: ChartConfiguration['options'] = {
     responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 4,
     elements: {
       line: {
         tension: 0.5,
