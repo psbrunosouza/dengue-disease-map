@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://info.dengue.mat.br",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
