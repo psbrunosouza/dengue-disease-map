@@ -1,0 +1,11 @@
+<main class="bg-accent min-h-[94px] w-full p-4 flex flex-col">
+  <section>
+    <ng-content select="[header]"></ng-content>
+  </section>
+  <section class="flex-grow">
+    <ng-content select="[body]"></ng-content>
+  </section>
+  <section class="">
+    <ng-content select="[footer]"></ng-content>
+  </section>
+</main>

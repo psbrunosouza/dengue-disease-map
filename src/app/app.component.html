@@ -1,5 +1,7 @@
-<main class="w-screen h-screen">
-  <header class="h-[84px] w-full px-[16px] flex items-center justify-center">
+<div class="w-screen h-screen flex flex-col">
+  <header
+    class="min-h-[84px] max-h-[84px] w-full px-[16px] flex items-center justify-center"
+  >
     <ul class="flex gap-4">
       <li><a class="font-bold" href="#">HOME</a></li>
       <li>|</li>
@@ -8,7 +10,52 @@
       <li><a class="font-bold" href="#">CHIKUNGUNYA</a></li>
     </ul>
   </header>
-  <section>
-    <router-outlet></router-outlet>
-  </section>
-</main>
+  <main class="flex-grow flex flex-col gap-2 px-[16px]">
+    <section class="flex gap-2">
+      <app-card>
+        <div class="flex justify-between" header>
+          <div><p class="font-bold">NÍVEL</p></div>
+        </div>
+        <div class="text-end font-bold" footer>
+          <div><p>2/4</p></div>
+        </div>
+      </app-card>
+      <app-card>
+        <div class="flex justify-between" header>
+          <div><p class="font-bold">ÓBITOS</p></div>
+        </div>
+        <div class="text-end font-bold" footer>
+          <div><p>10</p></div>
+        </div>
+      </app-card>
+      <app-card>
+        <div class="flex justify-between" header>
+          <div><p class="font-bold">SE</p></div>
+        </div>
+        <div class="text-end font-bold" footer>
+          <div><p>42/53</p></div>
+        </div>
+      </app-card>
+    </section>
+
+    <section>
+      <app-card>
+        <div class="flex justify-between items-center" header>
+          <div><p class="font-bold">MAPA DAS ARBOVIROSES</p></div>
+          <i-feather name="more-horizontal"></i-feather>
+        </div>
+        <div body>
+          <app-map></app-map>
+        </div>
+        <div class="text-end font-bold" footer>
+          <div><p>1200 CASOS</p></div>
+        </div>
+      </app-card>
+    </section>
+  </main>
+  <footer
+    class="min-h-[84px] max-h-[84px] w-full px-[16px] flex items-center justify-center"
+  >
+    <p>2024. Mapa da Dengue.</p>
+  </footer>
+</div>
